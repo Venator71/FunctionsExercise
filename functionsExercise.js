@@ -209,6 +209,15 @@ caps = string => {
 
  console.log(caps(`Hello World`));
 
+// or
+
+ caps = (string) => {
+    for (i=0; i < string.length; i+=2){
+        string = string.substring(0, i) + string[i].toUpperCase() + string.substring(i+1);
+    }
+    return string;
+};
+
 // Extra Bonus
 
  caps = (string) => {
